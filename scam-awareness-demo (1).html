@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .warning-banner {
+            background-color: #ff4444;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .prize-image {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .timer {
+            color: #ff0000;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .form-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .shipping-cost {
+            background-color: #f8f8f8;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+        #page2 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-banner">
+        ⚠️ EDUCATIONAL DEMO - Example of a Scam Website ⚠️
+    </div>
+    
+    <div id="page1" class="content-box">
+        <h1>Congratulations! 🎉</h1>
+        <p>You're today's lucky visitor!</p>
+        
+        <div class="prize-image">
+            <img src="data:image/jpeg;base64,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" alt="Prize Image">
+        </div>
+        
+        <h2>You've won a Brand New Smartphone!</h2>
+        <p>Value: $999</p>
+        
+        <div class="timer">
+            Time remaining: 04:59
+        </div>
+        
+        <p>To claim your prize:</p>
+        <ol style="text-align: left;">
+            <li>Click the button below</li>
+            <li>Complete a brief survey</li>
+            <li>Provide shipping details</li>
+        </ol>
+        
+        <button class="button" onclick="document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='block';">Claim Prize Now!</button>
+        
+        <p style="font-size: 12px; color: #666;">
+            Limited time offer. Only 2 prizes remaining today!
+        </p>
+    </div>
+
+    <div id="page2" class="content-box">
+        <h1>Just One Step Away! 📱</h1>
+        <p>Your Brand New Smartphone is ready to ship!</p>
+
+        <div class="shipping-cost">
+            <h3>Priority Secure Shipping</h3>
+            <p>Due to the high value of your prize ($999), we require:</p>
+            <ul style="text-align: left;">
+                <li>Insurance Fee: $4.99</li>
+                <li>Priority Processing: $2.99</li>
+                <li><strong>Total: $7.98</strong></li>
+            </ul>
+            <p style="color: #666; font-size: 12px;">*This small fee ensures safe delivery of your prize</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label>Shipping Address:</label>
+                <input type="text" placeholder="Enter your address">
+            </div>
+            <div class="form-group">
+                <label>Phone Number:</label>
+                <input type="tel" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label>Card Number:</label>
+                <input type="text" placeholder="Enter your card number">
+            </div>
+            <div class="form-group">
+                <label>Expiry Date:</label>
+                <input type="text" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label>CVV:</label>
+                <input type="text" placeholder="Enter CVV">
+            </div>
+
+            <button class="button">Pay $7.98 & Claim Prize</button>
+        </form>
+
+        <p style="font-size: 12px; color: #666; margin-top: 20px;">
+            🔒 Secure Payment | Limited Time Offer
+        </p>
+    </div>
+</body>
+</html>
